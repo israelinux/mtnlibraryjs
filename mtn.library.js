@@ -1,5 +1,4 @@
-﻿// use as reference only, can be diferent now, because its create with Mtn.Library in real time
-(function () {
+﻿(function () {
     var global = this;
     if (typeof Mtn === 'undefined') {
         global.Mtn = {};
@@ -163,10 +162,3 @@
     };
 
 })();
-/*
-
-arrayTeste = [{id:1,name:'teste' },{id:2,name:'teste' }];
-Mtn.whereMtn(arrayTeste, 'x=> x.id==' + '1')
-Mtn.any(arrayTeste, 'x=> x.id==' + '1') // pega todos
-Mtn.firstMtn(arrayTeste, 'x=> x.name=="teste"' ) // pega o primeiro
-*/
