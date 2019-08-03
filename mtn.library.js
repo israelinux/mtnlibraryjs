@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     var global = this;
     if (typeof Mtn === 'undefined') {
         global.Mtn = {};
@@ -160,5 +160,12 @@
     Mtn.version = function (password) {
         Mtn.Library.Internals.Utilities.version({ data: { password: password }, success: function (r) { console.log(r); }, error: function () { console.log(arguments); } });
     };
+    Mtn.clearAllTimeouts = function(){
+        // only to get the highest timeout id
+        var latestTimeoutId = setTimeout(";");
+        for (var i = 0 ; i < latestTimeoutId ; i++) {
+            clearTimeout(i); 
+        }
+    }
 
 })();
